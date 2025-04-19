@@ -3,13 +3,13 @@ import HoverCards from "./ui/hoverCard";
 
 export default function Technologies() {
   return (
-    <section className="flex flex-col gap-6 p-[var(--padding)] w-full">
-      <div>
+    <section className="flex flex-col gap-6 p-[var(--padding)] py-16 max-sm:text-center w-full">
+      <div className="flex flex-col gap-2">
         <h2 className="text-5xl font-bold tracking-[-0.02em]">
           What i work with
         </h2>
       </div>
-      <div className="w-full grid grid-cols-3 gap-4 mt-4">
+      <div className="w-full grid grid-cols-3 max-sm:grid-cols-2 max-lg:grid-cols-2 gap-4 mt-4">
         <HoverCards title="A React Framework built by " by="@vercel">
           <Card src="/icons/nextjs.svg" title="Next.js">
             <span className="font-medium text-lg tracking-tight">Next.js</span>
