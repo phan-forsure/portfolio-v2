@@ -8,11 +8,11 @@ import {
 
 function NavItem({
   href,
-  icon,
+  children,
   label,
 }: {
   href: string;
-  icon: React.ReactNode;
+  children: React.ReactNode;
   label: string;
 }) {
   return (
@@ -22,7 +22,7 @@ function NavItem({
           href={href}
           className="p-4 bg-accent/70 rounded-sm border-1 border-transparent hover:border-accent-foreground/20 transition-all hover:text-accent-foreground"
         >
-          {icon}
+          {children}
         </Link>
       </TooltipTrigger>
       <TooltipContent>{label}</TooltipContent>
@@ -32,23 +32,25 @@ function NavItem({
 
 export default function Nav() {
   return (
-    <div className="fixed left-6 top-1/2 -translate-y-1/2 z-50 border-2 h-[60%] rounded-2xl">
+    <nav className="fixed max-md:sticky left-6 top-1/2 -translate-y-1/2 z-50 border-2 h-[60%] rounded-2xl max-md:top-11 max-md:left-0 max-md:w-full max-md:h-auto">
       <div className="relative">
-        {/* Dock-style navigation */}
-        <div className="flex flex-col items-center gap-2 p-2 bg-background/70 backdrop-blur-xl border border-border/40 rounded-full shadow-lg">
-          <NavItem href="/" icon={<Home size={18} />} label="Home" />
-          <NavItem href="/about" icon={<User size={18} />} label="About" />
-          <NavItem
-            href="/projects"
-            icon={<Code size={18} />}
-            label="Projects"
-          />
-          <NavItem href="/contact" icon={<Mail size={18} />} label="Contact" />
+        <div className="flex flex-col max-md:flex-row items-center gap-2 p-2 bg-background/70 backdrop-blur-xl border border-border/40 rounded-2xl shadow-lg">
+          <NavItem href="/" label="Home">
+            <Home size={18} />
+          </NavItem>
+          <NavItem href="/about" label="About">
+            <User size={18} />
+          </NavItem>
+          <NavItem href="/projects" label="Projects">
+            <Code size={18} />
+          </NavItem>
+          <NavItem href="/contact" label="Contact">
+            <Mail size={18} />
+          </NavItem>
         </div>
 
-        {/* Side reflection effect */}
         <div className="absolute -right-3 top-0 bottom-0 w-3 bg-gradient-to-r from-background/20 to-transparent rounded-r-lg my-4 blur-sm"></div>
       </div>
-    </div>
+    </nav>
   );
 }

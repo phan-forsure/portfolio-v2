@@ -10,7 +10,7 @@ export default function Card({
   title: string;
 }) {
   return (
-    <div className="card w-full h-44 bg-card rounded-md border-1 border-border hover:border-[var(--geist-cyan-dark)] transition-all">
+    <div className="card w-full h-44 bg-card rounded-md border-1 border-border hover:border-[var(--border-bright)] hover:bg-[var(--accent-bright)] transition-all">
       <HoverCards
         title="A Javascript type preprocessor developed by "
         by="@microsoft"
