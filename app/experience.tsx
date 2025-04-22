@@ -1,38 +1,7 @@
+import { experiences } from "./libs/experience";
 import Reveal from "./ui/reveal";
 
 export default function Experience() {
-  // Experience data with timeline points
-  const experiences = [
-    {
-      year: "2018",
-      title: "Junior Developer",
-      company: "StartUp Tech",
-      description:
-        "Contributed to the development of web applications, focusing on frontend components and UI/UX improvements.",
-    },
-    {
-      year: "2019",
-      title: "Frontend Developer",
-      company: "Creative Web Agency",
-      description:
-        "Designed and developed user interfaces for client websites. Specialized in responsive design and modern JavaScript frameworks.",
-    },
-    {
-      year: "2021",
-      title: "Full Stack Developer",
-      company: "Digital Innovations",
-      description:
-        "Built responsive web applications and RESTful APIs. Worked with React, Node.js, and PostgreSQL in an agile environment.",
-    },
-    {
-      year: "2023",
-      title: "Senior Developer",
-      company: "Tech Solutions Inc.",
-      description:
-        "Led development team for multiple client projects, implementing cutting-edge web solutions using Next.js and React.",
-    },
-  ];
-
   return (
     <Reveal>
       <section className="flex flex-col gap-6 p-[var(--padding)] w-full max-sm:text-center">
@@ -53,7 +22,9 @@ export default function Experience() {
                 <div className="relative min-w-[120px] text-right max-sm:text-left">
                   <div className="flex items-center max-sm:hidden">
                     <div className="absolute right-[96px] w-4 h-4 rounded-full bg-accent"></div>
-                    <span className="font-bold text-lg text-right w-full">{exp.year}</span>
+                    <span className="font-bold text-lg text-right w-full">
+                      {exp.year}
+                    </span>
                   </div>
                   <span className="font-bold text-lg sm:hidden">
                     {exp.year}
@@ -63,8 +34,11 @@ export default function Experience() {
                 {/* Experience content */}
                 <Reveal>
                   <div className="flex-1 bg-card border border-border p-6 rounded-lg">
+                    <span className="text-xl text-[var(--geist-cyan)] bg-[var(--geist-cyan-dark)] cursor-pointer">
+                      {exp.project}
+                    </span>
                     <h3 className="text-xl font-bold">{exp.title}</h3>
-                    <p className="text-muted-foreground mb-3">{exp.company}</p>
+                    <p className="text-muted-foreground mb-3">{exp.date}</p>
                     <p>{exp.description}</p>
                   </div>
                 </Reveal>
