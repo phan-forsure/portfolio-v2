@@ -5,19 +5,22 @@ export default function Card({
   src,
   title,
   desc,
-  by
+  by,
+  link,
 }: {
   children: React.ReactNode;
   src: string;
   title: string;
   desc: string;
   by: string;
+  link: string;
 }) {
   return (
     <div className="card w-full h-44 bg-card rounded-md border-1 border-border hover:border-[var(--border-bright)] hover:bg-[var(--accent-bright)] transition-all">
       <HoverCards
         title={desc}
         by={by}
+        link={link}
       >
         <div className="w-full h-full flex items-center justify-center group">
           <div className="flex flex-col items-center justify-center h-full gap-4 opacity-60 group-hover:opacity-100 transition-opacity duration-200">

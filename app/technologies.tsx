@@ -12,36 +12,84 @@ export default function Technologies() {
           </h2>
         </div>
         <div className="w-full grid grid-cols-3 max-sm:grid-cols-2 max-lg:grid-cols-2 gap-4 mt-4">
-          <Card src="/icons/nextjs.svg" title="Next.js" desc="A Modern React framework built by " by="@vercel">
+          <Card
+            src="/icons/nextjs.svg"
+            title="Next.js"
+            desc="A Modern React framework built by "
+            by="@vercel"
+            link="https://vercel.com"
+          >
             <span className="font-medium text-lg tracking-tight">Next.js</span>
           </Card>
-          <Card src="/icons/react.svg" title="React" desc="A JavaScript library for building user interfaces built by " by="@facebook">
+          <Card
+            src="/icons/react.svg"
+            title="React"
+            desc="A JavaScript library for building user interfaces built by the developers at "
+            by="@facebook"
+            link="https://react.dev"
+          >
             <span className="font-medium text-lg tracking-tight">React</span>
           </Card>
-          <Card src="/icons/tailwind.svg" title="Tailwind CSS" desc="A utility-first CSS framework built by " by="@tailwindcss">
+          <Card
+            src="/icons/tailwind.svg"
+            title="Tailwind CSS"
+            desc="A utility-first CSS framework built by "
+            by="@tailwindcss"
+            link="https://tailwindcss.com"
+          >
             <span className="font-medium text-lg tracking-tight">
               Tailwind CSS
             </span>
           </Card>
 
-          <Card src="/icons/typescript.svg" title="TypeScript" desc="A statically typed programming language that builds on JavaScript built by " by="@microsoft">
+          <Card
+            src="/icons/typescript.svg"
+            title="TypeScript"
+            desc="A statically typed programming language that builds on JavaScript built by "
+            by="@microsoft"
+            link="https://www.typescriptlang.org/"
+          >
             <span className="font-medium text-lg tracking-tight">
               TypeScript
             </span>
           </Card>
-          <Card src="/icons/nodejs.svg" title="Node.js" desc="A runtime environment to run JavaScript on servers " by="@nodejs">
+          <Card
+            src="/icons/nodejs.svg"
+            title="Node.js"
+            desc="A runtime environment to run JavaScript on servers "
+            by="@nodejs"
+            link="https://nodejs.org/en"
+          >
             <span className="font-medium text-lg tracking-tight">Node.js</span>
           </Card>
 
-          <Card src="/icons/supabase.svg" title="Supabase" desc="A modern database that hosts PostgreSQL databases " by="@supabase">
+          <Card
+            src="/icons/supabase.svg"
+            title="Supabase"
+            desc="A modern database that hosts PostgreSQL databases "
+            by="@supabase"
+            link="https://supabase.com/"
+          >
             <span className="font-medium text-lg tracking-tight">Supabase</span>
           </Card>
-          <Card src="/icons/postgresql.svg" title="PostgreSQL" desc="A powerful, open source object-relational database system " by="@postgresql">
+          <Card
+            src="/icons/postgresql.svg"
+            title="PostgreSQL"
+            desc="A powerful, open source object-relational database system "
+            by="@postgresql"
+            link="https://www.postgresql.org/"
+          >
             <span className="font-medium text-lg tracking-tight">
               PostgreSQL
             </span>
           </Card>
-          <Card src="/icons/electron.svg" title="Electron" desc="A framework for building cross-platform desktop applications with web technologies " by="@electron">
+          <Card
+            src="/icons/electron.svg"
+            title="Electron"
+            desc="A framework for building cross-platform desktop applications with web technologies "
+            by="@electron"
+            link="https://www.electronjs.org/"
+          >
             <span className="font-medium text-lg tracking-tight">Electron</span>
           </Card>
         </div>
