@@ -1,5 +1,14 @@
 import Link from "next/link";
-import { Home, User, Code, Mail } from "lucide-react";
+import {
+  Home,
+  User,
+  Code,
+  Mail,
+  Github,
+  Linkedin,
+  X,
+  Twitter,
+} from "lucide-react";
 import {
   Tooltip,
   TooltipTrigger,
@@ -34,7 +43,7 @@ export default function Nav() {
   return (
     <nav className="fixed max-md:sticky left-6 top-1/2 -translate-y-1/2 z-50 border-2 h-[60%] rounded-2xl max-md:top-11 max-md:left-0 max-md:w-full max-md:h-auto">
       <div className="relative">
-        <div className="flex flex-col max-md:flex-row items-center gap-2 p-2 bg-background/70 backdrop-blur-xl border border-border/40 rounded-2xl shadow-lg">
+        <div className="flex flex-col justify-between max-md:flex-row items-center gap-2 p-2 bg-background/70 backdrop-blur-xl border border-border/40 rounded-2xl shadow-lg">
           <NavItem href="/" label="Home">
             <Home size={18} />
           </NavItem>
@@ -46,6 +55,18 @@ export default function Nav() {
           </NavItem>
           <NavItem href="/contact" label="Contact">
             <Mail size={18} />
+          </NavItem>
+          <NavItem href="https://github.com/phan-forsure/" label="Github">
+            <Github size={18} />
+          </NavItem>
+          <NavItem href="https://github.com/phan-forsure/" label="Linkedin">
+            <Linkedin size={18} />
+          </NavItem>
+          <NavItem href="https://github.com/phan-forsure/" label="Twitter">
+            <Twitter size={18} />
+          </NavItem>
+          <NavItem href="https://github.com/phan-forsure/" label="Codeforces">
+            <Code size={18} />
           </NavItem>
         </div>
 

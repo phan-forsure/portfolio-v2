@@ -21,9 +21,9 @@ export default function Projects() {
                 target="_blank"
                 rel="noopener noreferrer"
                 key={project.name}
-                className="group project-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-border flex flex-col hover:border-accent w-full h-[450px]"
+                className="group project-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-border flex flex-col hover:border-accent w-full h-[450px] max-sm:h-[300px]"
               >
-                <div className="relative overflow-hidden h-[80%]">
+                <div className="relative overflow-hidden h-[80%] ">
                   <img
                     src={project.image}
                     alt={project.name}

@@ -23,7 +23,7 @@ export const experiences = [
     title: "Electron Developer",
     date: "Sep 2024",
     description:
-      "Learned about linux systems and managing servers. Joined a problem solving community and started solving problems on Codeforces and Leetcode. Learned about low level programming in C++ and created a Workflow app to increase my productivity.",
+      "Learned about linux systems and managing servers. Joined a problem solving community and started solving problems on Codeforces and Leetcode. Learned about low level programming in C++ and created Workflow app to increase my productivity.",
   },
   {
     project: [
