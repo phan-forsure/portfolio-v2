@@ -149,3 +149,8 @@
     --padding: 1rem;
   }
 }
+@media (width < 48rem) {
+  .navbar {
+    display: none;
+  }
+}
