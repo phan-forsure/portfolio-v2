@@ -3,6 +3,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import Link from "next/link";
 
 export default function HoverCards({
   children,
@@ -20,11 +21,11 @@ export default function HoverCards({
       <HoverCardTrigger>{children}</HoverCardTrigger>
       <HoverCardContent>
         {title}
-        <a href={link} target="_blank">
+        <Link href={link} target="_blank">
           <span className="text-[var(--geist-cyan)] bg-[var(--geist-cyan-dark)]">
             {by}
           </span>
-        </a>
+        </Link>
       </HoverCardContent>
     </HoverCard>
   );

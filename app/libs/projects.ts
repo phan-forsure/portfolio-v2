@@ -15,7 +15,7 @@ export const projects = [
   },
   {
     name: "Henji",
-    description: "A daily life posting social media app for me and my friend",
+    description: "A daily life posting social media app for me and my friends",
     image: "/henji.png",
     link: "https://henji.vercel.app",
     techs: ["NextJS", "Tailwindcss", "Supabase", "PostgreSQL"]

@@ -10,7 +10,7 @@ export function Hero() {
           <span className="text-[var(--geist-cyan)] bg-[var(--geist-cyan-dark)]">
             software developer
           </span>{" "}
-          who has been programming for 2 years and still ambitious to learning
+          who has been programming for 2 years and still ambitious to learn
           new things everyday
         </p>
       </section>

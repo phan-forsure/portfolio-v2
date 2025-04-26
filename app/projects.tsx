@@ -30,7 +30,11 @@ export default function Projects() {
                     className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-4">
-                    {project.techs?.map(e => <div className="px-2 max-sm:text-sm">{e}</div>)}
+                    {project.techs?.map((e) => (
+                      <div key={e} className="px-2 max-sm:text-sm">
+                        {e}
+                      </div>
+                    ))}
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4">
                     <ExternalLink className="text-white w-5 h-5" />
