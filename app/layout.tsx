@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "./ui/nav";
+import { CommandMenu } from "./ui/command";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans text-base leading-relaxed tracking-wide`}
       >
         <Nav />
+        <CommandMenu />
         <main className="main-content font-sans px-96 max-md:px-0 max-[1275px]:px-64 max-[1000px]:px-36 py-8 flex flex-wrap justify-center">
           {children}
         </main>
