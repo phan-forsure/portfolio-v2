@@ -89,11 +89,11 @@ export default function Tab() {
             <p className="mb-4">
               Here are some technologies and tools I've been working with:
             </p>
-            <div className="space-y-4">
+            <div className="space-y-4 grid grid-cols-2">
               {skills.map((skill) => (
                 <div key={skill.name}>
                   <div className="flex justify-between mb-1">
-                    <span>{skill.name}</span>
+                    <span className="opacity-50">{skill.name}</span>
                   </div>
                 </div>
               ))}

@@ -50,13 +50,13 @@ export default function About() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold mb-4">Let's Connect</h2>
+          <h2 className="text-2xl font-bold mb-4 bg-[var(--geist-cyan-dark)] text-[var(--geist-cyan)] w-fit">Let's Connect</h2>
           <p className="mb-6">
             I'm always open to discussing new projects, creative ideas, or
             opportunities to be part of your vision.
           </p>
           <Link
-            href="mailto:your.email@example.com"
+            href="mailto:phantommy38@gmail.com"
             className="inline-block bg-accent px-6 py-3 rounded border-2 border-accent hover:border-border transition"
           >
             Get In Touch

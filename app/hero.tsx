@@ -1,3 +1,5 @@
+import { Github, Linkedin, Twitter } from "lucide-react";
+import NavItem from "./ui/navItem";
 import Reveal from "./ui/reveal";
 
 export function Hero() {
@@ -10,9 +12,28 @@ export function Hero() {
           <span className="text-[var(--geist-cyan)] bg-[var(--geist-cyan-dark)]">
             software developer
           </span>{" "}
-          who has been programming for 2 years and still ambitious to learn
-          new things everyday
+          who has been programming for 2 years and still ambitious to learn new
+          things everyday
         </p>
+        <div className="socials flex gap-3">
+          <NavItem
+            target="_blank"
+            href="https://github.com/phan-forsure/"
+            label="Github"
+          >
+            <Github size={18} />
+          </NavItem>
+          <NavItem
+            target="_blank"
+            href="https://www.linkedin.com/in/abdulrahman-a-12ab482b7/"
+            label="Linkedin"
+          >
+            <Linkedin size={18} />
+          </NavItem>
+          <NavItem target="_blank" href="https://x.com/phan__n" label="Twitter">
+            <Twitter size={18} />
+          </NavItem>
+        </div>
       </section>
     </Reveal>
   );
