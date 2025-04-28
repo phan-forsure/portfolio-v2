@@ -5,7 +5,7 @@ import {
 } from "@radix-ui/react-collapsible";
 import { ChevronsUpDown } from "lucide-react";
 
-export default function Details({ detail }: { detail: string }) {
+export default function Details({ detail }: { detail: string | undefined }) {
   return (
     <Collapsible>
       <CollapsibleTrigger className="w-full flex justify-end items-center cursor-pointer">

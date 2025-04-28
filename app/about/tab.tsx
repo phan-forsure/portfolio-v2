@@ -10,21 +10,25 @@ export default function Tab() {
     { name: "TypeScript" },
     { name: "CSS/Tailwind" },
     { name: "Node.js" },
+    { name: "Typescript" },
+    { name: "Vite" },
+    { name: "Supabase" },
+    { name: "PostgreSQL" },
   ];
 
   const experiences = [
     {
       title: "Frontend Developer",
+      company: "Workflow app",
+      period: "Nov 2023",
+      description: "Built a notes application by myself. Learned a lot.",
+    },
+    {
+      title: "Fullstack developer",
       company: "Henji",
       period: "Feb 2025",
       description:
         "Built a social media app working on a team of 2 with my friend.",
-    },
-    {
-      title: "Fullstack developer",
-      company: "Workflow",
-      period: "Nov 2023",
-      description: "Built a notes application by myself. Learned a lot",
     },
   ];
 

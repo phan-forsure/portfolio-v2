@@ -13,7 +13,7 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "Note taking app",
+    title: "Workflow",
     description: "A productivity application for managing notes and tasks.",
     longDescription:
       "This task management application helps users organize their work with notes with to-do lists, data tables, dates, and tags. Features include drag-and-drop organization, recurring tasks, and data visualization of productivity metrics.",

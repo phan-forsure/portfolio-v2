@@ -7,11 +7,13 @@ export default function Project({ project }: { project: Project }) {
       key={project.id}
       className="bg-card w-full my-8 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl border border-border"
     >
-      <img
-        src={project.imageUrl}
-        alt={`${project.title} preview`}
-        className="w-full object-cover"
-      />
+      {project.imageUrl && (
+        <img
+          src={project.imageUrl}
+          alt={`${project.title} preview`}
+          className="w-full object-cover"
+        />
+      )}
       <div className="p-6">
         <div className="flex items-center justify-between">
           <h3 className="text-xl font-semibold mb-2 text-card-foreground">
@@ -54,8 +56,9 @@ export default function Project({ project }: { project: Project }) {
           ))}
         </div>
 
-        <div className="flex items-center justify-between mt-4"></div>
-        <Details detail={project.longDescription} />
+        {project.longDescription && (
+          <Details detail={project.longDescription} />
+        )}
       </div>
     </div>
   );
