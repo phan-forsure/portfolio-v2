@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { experiences } from "./libs/experience";
 import Reveal from "./ui/reveal";
 
@@ -35,9 +36,9 @@ export default function Experience() {
                         className="text-xl text-[var(--geist-cyan)] bg-[var(--geist-cyan-dark)] cursor-pointer"
                         key={e.name}
                       >
-                        <a href={e.link} key={e.name}>
+                        <Link target="_blank" href={e.link} key={e.name}>
                           {e.name}
-                        </a>
+                        </Link>
                       </span>
                     ))}
                     <h3 className="text-xl font-bold">{exp.title}</h3>

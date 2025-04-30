@@ -1,6 +1,7 @@
 import { Linkedin, Mail, Twitter } from "lucide-react";
 import NavItem from "../ui/navItem";
 import Reveal from "../ui/reveal";
+import SocialBtn from "../ui/socialButton";
 
 export default function Contact() {
   return (
@@ -15,29 +16,17 @@ export default function Contact() {
             directly via any of my socials.
           </p>
           <div className="flex gap-5 pt-8 mx-auto w-fit">
-            <NavItem
-              target="_blank"
-              href="https://x.com/phan__n"
-              label="Twitter"
-            >
+            <SocialBtn>
               <Twitter size={18} />
-            </NavItem>
+            </SocialBtn>
 
-            <NavItem
-              target="_blank"
-              href="mailto:phantommy38@gmail.com"
-              label="Email"
-            >
+            <SocialBtn>
               <Mail size={18} />
-            </NavItem>
+            </SocialBtn>
 
-            <NavItem
-              target="_blank"
-              href="https://www.linkedin.com/in/abdulrahman-a-12ab482b7/"
-              label="LinkedIn"
-            >
+            <SocialBtn>
               <Linkedin size={18} />
-            </NavItem>
+            </SocialBtn>
           </div>
         </div>
 

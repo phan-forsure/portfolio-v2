@@ -1,32 +1,33 @@
-import {
-  Home,
-  User,
-  Code,
-  Mail,
-  Github,
-  Linkedin,
-  Twitter,
-} from "lucide-react";
 import NavItem from "./navItem";
+import { Geist_Mono } from "next/font/google";
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
 
 export default function Nav() {
   return (
-    <nav className="navbar fixed max-md:mx-auto max-md:sticky left-6 top-1/2 -translate-y-1/2 z-50 border-2 h-fit rounded-2xl max-md:top-11 max-md:w-fit max-md:h-auto">
-      <div className="relative">
-        <div className="flex flex-col overflow-x-scroll justify-between max-md:flex-row items-center gap-2 p-2 bg-background/70 backdrop-blur-xl border border-border/40 rounded-2xl shadow-lg">
-          <NavItem href="/" label="Home">
-            <Home size={18} />
-          </NavItem>
-          <NavItem href="/about" label="About">
-            <User size={18} />
-          </NavItem>
-          <NavItem href="/projects" label="Projects">
-            <Code size={18} />
-          </NavItem>
-          <NavItem href="/contact" label="Contact">
-            <Mail size={18} />
-          </NavItem>
-        </div>
+    <nav className="navbar bg-background/50 max-sm:text-sm flex gap-5 justify-center items-center fixed w-full backdrop-blur-xl z-40 border border-border/40 shadow-lg p-2">
+      <div className="flex overflow-x-scroll w-fit justify-center items-center gap-5">
+            {[
+              { name: "Home", path: "/" },
+              { name: "About", path: "/about" },
+              { name: "Projects", path: "/projects" },
+              { name: "Contact", path: "/contact" },
+            ].map((item: CommandItemType) => (
+              <NavItem key={item.name} href={item.path}>
+                <h2>{item.name}</h2>
+              </NavItem>
+            ))}
+      </div>
+      <div className="max-sm:hidden">
+        <p
+          className={`${geistMono.className} bg-[var(--geist-cyan-dark)] text-[var(--geist-cyan)] rounded-md flex items-center p-2 text-sm font-semibold`}
+        >
+          CTRL + K
+        </p>
       </div>
     </nav>
   );

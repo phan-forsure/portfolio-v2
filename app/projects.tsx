@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { projects } from "./libs/projects";
 import Reveal from "./ui/reveal";
 import { ExternalLink } from "lucide-react";
@@ -16,18 +17,18 @@ export default function Projects() {
         <div className="flex flex-wrap gap-6">
           {projects.map((project) => (
             <Reveal key={project.name}>
-              <a
+              <Link
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 key={project.name}
-                className="group project-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-border flex flex-col hover:border-accent w-full h-[450px] max-sm:h-[300px]"
+                className="group project-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-border flex flex-col hover:border-accent w-full "
               >
-                <div className="relative overflow-hidden h-[80%] ">
+                <div className="relative overflow-hidden  ">
                   <img
                     src={project.image}
                     alt={project.name}
-                    className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-full object-cover  transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-4">
                     {project.techs?.map((e) => (
@@ -48,7 +49,7 @@ export default function Projects() {
                     {project.description}
                   </p>
                 </div>
-              </a>
+              </Link>
             </Reveal>
           ))}
         </div>

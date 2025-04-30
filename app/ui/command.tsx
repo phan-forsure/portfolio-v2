@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Command,
   CommandDialog,
   CommandEmpty,
   CommandGroup,
@@ -33,38 +32,21 @@ export function CommandMenu() {
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading="Suggestions">
-          <CommandItem
-            onSelect={() => {
-              router.push("/");
-              // setOpen(false);
-            }}
-          >
-            Home
-          </CommandItem>
-          <CommandItem
-            onSelect={() => {
-              router.push("/about");
-              // setOpen(false);
-            }}
-          >
-            ِAbout
-          </CommandItem>
-          <CommandItem
-            onSelect={() => {
-              router.push("/projects");
-              // setOpen(false);
-            }}
-          >
-            Projects
-          </CommandItem>
-          <CommandItem
-            onSelect={() => {
-              router.push("/contact");
-              // setOpen(false);
-            }}
-          >
-            Contact
-          </CommandItem>
+          {[
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+            { name: "Projects", path: "/projects" },
+            { name: "Contact", path: "/contact" },
+          ].map((item: CommandItemType) => (
+            <CommandItem
+              key={item.name}
+              onSelect={() => {
+                router.push(item.path);
+              }}
+            >
+              {item.name}
+            </CommandItem>
+          ))}
         </CommandGroup>
       </CommandList>
     </CommandDialog>

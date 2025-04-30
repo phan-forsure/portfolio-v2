@@ -6,15 +6,14 @@ export default function NavItem({
   target,
 }: {
   href: string;
-  children: React.ReactNode;
-  label: string;
+  children?: React.ReactNode;
   target?: string;
 }) {
   return (
     <Link
       target={target}
       href={href}
-      className="p-4 bg-accent/70 rounded-sm border-1 border-transparent hover:border-accent-foreground/20 transition-all hover:text-accent-foreground"
+      className="p-1 transition-all hover:text-accent-foreground opacity-50 hover:opacity-100 flex items-center gap-2"
     >
       {children}
     </Link>

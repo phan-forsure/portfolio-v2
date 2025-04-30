@@ -8,3 +8,8 @@ type Project = {
   githubUrl: string;
   liveUrl?: string;
 };
+
+type CommandItemType = {
+  name: string;
+  path: string;
+};
