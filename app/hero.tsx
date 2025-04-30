@@ -17,13 +17,13 @@ export function Hero() {
         </p>
 
         <div className="socials flex gap-3">
-          <SocialBtn>
+          <SocialBtn link={"https://github.com/phan-forsure/"}>
             <Github size={18} />
           </SocialBtn>
-          <SocialBtn>
+          <SocialBtn link={"https://www.linkedin.com/in/abdulrahman-a-12ab482b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}>
             <Linkedin size={18} />
           </SocialBtn>
-          <SocialBtn>
+          <SocialBtn link={"https://x.com/phan__n?t=8K7OTQO_nloEU5yMcOXzgQ&s=09"}>
             <Twitter size={18} />
           </SocialBtn>
         </div>
