@@ -1,7 +1,5 @@
-'use client"';
 import HoverCards from "./hoverCard";
 type CardProps = {
-  ref: React.RefObject<HTMLDivElement | null>;
   children: React.ReactNode;
   src: string;
   title: string;
@@ -11,53 +9,51 @@ type CardProps = {
   row: number;
   col: number;
 };
-
-function cardClick(
-  col: number,
-  row: number,
-  ref: React.RefObject<HTMLDivElement | null>
-) {
-  const childrenCols = Array.from(ref.current?.children!).map(
-    (child) => child.classList[10].split("-")[1]
-  );
-  const childrenRows = Array.from(ref.current?.children!).map(
-    (child) => child.classList[11].split("-")[1]
-  );
-  // idea 1:
-  // for (let i in childrenCols) {
-  //   if (
-  //     childrenCols[i] != (col + 1).toString() &&
-  //     childrenRows[i] != (row + 1).toString()
-  //   ) {
-  //     const card = ref.current?.children[i] as HTMLDivElement;
-  //     card.classList.toggle("hover:bg-[var(--accent-bright)]");
-  //     card.classList.toggle("bg-[var(--accent-bright)]");
-  //     card.classList.toggle("border-[var(--border-bright)]");
-  //     card.classList.toggle("border-1");
-  //   }
-  // }
-  // idea 2:
-  for (let i in childrenCols) {
-    // console.log(childrenCols, col);
-    if (childrenCols[i] != (col + 1).toString() && col < 3) {
-      const card = ref.current?.children[i] as HTMLDivElement;
-      console.log(card)
-      card.classList.toggle(`col-${col + 1}`);
-    } else if (childrenCols[i] != (col - 1).toString() && col > 1) {
-      const card = ref.current?.children[i] as HTMLDivElement;
-      card.classList.toggle(`col-${col - 1}`);
-    } else if (childrenRows[i] != (row + 1).toString() && row < 3) {
-      const card = ref.current?.children[i] as HTMLDivElement;
-      card.classList.toggle(`row-${row + 1}`);
-    } else if (childrenRows[i] != (row - 1).toString() && row > 1) {
-      const card = ref.current?.children[i] as HTMLDivElement;
-      card.classList.toggle(`col-${row - 1}`);
-    }
-  }
-}
+// just an idea for later
+// function cardClick(
+//   col: number,
+//   row: number,
+//   ref: React.RefObject<HTMLDivElement | null>
+// ) {
+//   const childrenCols = Array.from(ref.current?.children!).map(
+//     (child) => child.classList[10].split("-")[1]
+//   );
+//   const childrenRows = Array.from(ref.current?.children!).map(
+//     (child) => child.classList[11].split("-")[1]
+//   );
+//   // idea 1:
+//   // for (let i in childrenCols) {
+//   //   if (
+//   //     childrenCols[i] != (col + 1).toString() &&
+//   //     childrenRows[i] != (row + 1).toString()
+//   //   ) {
+//   //     const card = ref.current?.children[i] as HTMLDivElement;
+//   //     card.classList.toggle("hover:bg-[var(--accent-bright)]");
+//   //     card.classList.toggle("bg-[var(--accent-bright)]");
+//   //     card.classList.toggle("border-[var(--border-bright)]");
+//   //     card.classList.toggle("border-1");
+//   //   }
+//   // }
+//   // idea 2:
+//   for (let i in childrenCols) {
+//     // console.log(childrenCols, col);
+//     if (childrenCols[i] != (col + 1).toString() && col < 3) {
+//       const card = ref.current?.children[i] as HTMLDivElement;
+//       card.classList.toggle(`col-${col + 1}`);
+//     } else if (childrenCols[i] != (col - 1).toString() && col > 1) {
+//       const card = ref.current?.children[i] as HTMLDivElement;
+//       card.classList.toggle(`col-${col - 1}`);
+//     } else if (childrenRows[i] != (row + 1).toString() && row < 3) {
+//       const card = ref.current?.children[i] as HTMLDivElement;
+//       card.classList.toggle(`row-${row + 1}`);
+//     } else if (childrenRows[i] != (row - 1).toString() && row > 1) {
+//       const card = ref.current?.children[i] as HTMLDivElement;
+//       card.classList.toggle(`col-${row - 1}`);
+//     }
+//   }
+// }
 
 export default function Card({
-  ref,
   children,
   src,
   title,
@@ -69,8 +65,7 @@ export default function Card({
 }: CardProps) {
   return (
     <div
-      onClick={() => cardClick(col, row, ref)}
-      className={`card w-full h-44 bg-card rounded-md border-1 border-border hover:border-[var(--border-bright)] hover:bg-[var(--accent-bright)] transition-all col-${col} row-${row}`}
+      className={`card w-full h-44 bg-card rounded-md border-1 border-border hover:border-[var(--border-bright)] hover:bg-[var(--accent-bright)] transition-all`}
     >
       <HoverCards title={desc} by={by} link={link}>
         <div className="w-full h-full flex items-center justify-center group">

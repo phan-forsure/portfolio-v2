@@ -1,18 +1,12 @@
-"use client";
 import { techs } from "../libs/techs";
 import Card from "./card";
 
-export default function Techs({
-  ref,
-}: {
-  ref: React.RefObject<HTMLDivElement | null>;
-}) {
+export default function Techs() {
   return (
     <>
       {techs.map((tech) => {
         return (
           <Card
-            ref={ref}
             key={tech.title}
             src={tech.src}
             title={tech.title}

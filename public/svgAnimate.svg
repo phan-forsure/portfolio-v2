@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">
+  <style>
+    @keyframes drawLine {
+      0% { stroke-dashoffset: 1200; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .dotted-line {
+      stroke: white;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-dasharray: 2 4;
+      stroke-dashoffset: 1200;
+      opacity: 0.1;
+      animation: drawLine 3s cubic-bezier(0.42, 0, 0.58, 1) infinite; /* ease-in-out bezier curve */
+    }
+  </style>
+  <line class="dotted-line" x1="5" y1="50" x2="395" y2="50" />
+</svg>
